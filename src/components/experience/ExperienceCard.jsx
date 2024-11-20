@@ -9,10 +9,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-export const ExperienceCard = ({ logo, title, location, date, details }) => {
+export const ExperienceCard = ({bgColor, logo, title, location, date, details }) => {
   return (
-    <Box flexBasis="45%" m={2}>
-      <Card p={4} borderRadius="md" bg="gray.800" color="white" h="100%">
+    <Box m={2} height="100%">
+      <Card bg={bgColor} p={4} borderRadius="md" color="white" h="100%">
         <CardHeader>
           <Flex align="center" mb={2}>
             <Image src={logo} width="10%" mr={3} alt={`${title} Logo`} />

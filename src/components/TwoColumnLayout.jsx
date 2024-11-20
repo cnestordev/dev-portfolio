@@ -3,7 +3,7 @@ import { Box, Flex } from "@chakra-ui/react";
 export const TwoColumnLayout = ({ leftContent, rightContent, ...props }) => {
   return (
     <Box p={6} {...props}>
-      <Flex align="flex-start" justify="space-between">
+      <Flex alignItems="stretch" justify="space-between">
         {/* Left Column */}
         <Box flex="1" pr={4}>
           {leftContent}
