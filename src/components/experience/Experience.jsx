@@ -1,24 +1,34 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Heading, Flex } from "@chakra-ui/react";
+import { TwoColumnLayout } from "../TwoColumnLayout";
 import { ExperienceCard, experienceList } from ".";
 
 export const Experience = () => {
+  const leftContent = (
+    <Box>
+      {experienceList
+        .slice(0, Math.ceil(experienceList.length / 2))
+        .map((role, index) => (
+          <ExperienceCard key={index} {...role} />
+        ))}
+    </Box>
+  );
+
+  const rightContent = (
+    <Box>
+      {experienceList
+        .slice(Math.ceil(experienceList.length / 2))
+        .map((role, index) => (
+          <ExperienceCard key={index} {...role} />
+        ))}
+    </Box>
+  );
+
   return (
     <Box p={6} bg="gray.900" color="white">
       <Heading as="h2" size="xl" textAlign="center" mb={8}>
         Experience
       </Heading>
-      <Flex justifyContent="space-between" flexWrap="wrap" align="stretch">
-        {experienceList.map((role, index) => (
-          <ExperienceCard
-            key={index}
-            logo={role.logo}
-            title={role.title}
-            location={role.location}
-            date={role.date}
-            details={role.details}
-          />
-        ))}
-      </Flex>
+      <TwoColumnLayout leftContent={leftContent} rightContent={rightContent} />
     </Box>
   );
 };
