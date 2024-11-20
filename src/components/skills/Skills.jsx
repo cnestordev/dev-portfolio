@@ -5,18 +5,25 @@ import codeImage from "../../assets//code.svg";
 
 export const Skills = () => {
   const leftContent = (
-    <Box display="flex" justifyContent="center" p={4}>
-      <Image src={codeImage} alt="Developer illustration" boxSize="100%" />
+    <Box
+      display={{ base: "none", md: "flex" }} // Hide on mobile, show on larger screens
+      justifyContent="center"
+    >
+      <Image src={codeImage} alt="Developer illustration" boxSize="80%" />
     </Box>
   );
 
   const rightContent = (
     <Box>
-      <Flex justify="space-between">
+      <Flex
+        justify="space-between"
+        direction={{ base: "column", md: "row" }} // Stack on mobile, row on larger screens
+        gap={{ base: 4, md: 0 }} // Add spacing between items when stacked
+      >
         <Box
           flex="1"
           textAlign="center"
-          mr={4}
+          mb={{ base: 4, md: 0 }} // Add spacing on mobile
           p={4}
           borderRadius="md"
         >
@@ -25,21 +32,21 @@ export const Skills = () => {
         <Box
           flex="1"
           textAlign="center"
-          ml={4}
+          mb={{ base: 4, md: 0 }} // Add spacing on mobile
           p={4}
           borderRadius="md"
         >
           <SkillSection title="Backend" skills={backendSkills} />
         </Box>
       </Flex>
-      <Box mt={6} p={4} >
+      <Box mt={{ base: 4, md: 6 }} p={4}>
         <SkillSection title="Other" skills={otherSkills} />
       </Box>
     </Box>
   );
 
   return (
-    <Box bg='#f5f5f5' p={6}>
+    <Box bg="#f5f5f5" p={6}>
       <Heading as="h2" size="xl" textAlign="center" mb={8}>
         Tech Skills
       </Heading>

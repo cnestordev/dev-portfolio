@@ -1,5 +1,6 @@
-import { Box, Flex, Heading, Text, Badge, Image } from "@chakra-ui/react";
-import campground from "../assets/camp.png";
+import { Badge, Box, Flex, Heading, Text } from "@chakra-ui/react";
+import campground from "../assets/camp2.png";
+import { MdOutlineEmail } from "react-icons/md";
 
 export const About = () => {
   return (
@@ -9,84 +10,77 @@ export const About = () => {
       py={{ base: 10, md: 20 }}
       px={{ base: 5, md: 20 }}
       overflow="hidden"
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
     >
-      {/* Curved Background Effect */}
-      <Box
-        position="absolute"
-        top="0"
-        left="0"
-        right="0"
-        bottom="0"
-        bg="inherit"
-        zIndex={-1}
-        _before={{
-          content: '""',
-          position: "absolute",
-          top: "0",
-          left: "0",
-          width: "100%",
-          height: "100%",
-          background:
-            "radial-gradient(circle at bottom left, transparent, #FFF8E1 70%)",
-          zIndex: "-1",
-        }}
-      />
-
+      <Box>
+        <Heading textAlign="center" as="h2" size="xl" mb={4}>
+          About Me
+        </Heading>
+        <Badge
+          variant="subtle"
+          backgroundColor="#f1e1ad"
+          mb={4}
+          p={2}
+          rounded="md"
+          fontSize="md"
+          display="inline-flex"
+          alignItems="center"
+          gap={1}
+        >
+          <MdOutlineEmail />
+          <Text>nestorcdev@gmail.com</Text>
+        </Badge>
+      </Box>
       <Flex
         align="center"
-        maxW="1200px"
         mx="auto"
         direction={{ base: "column", md: "row" }} // Stack on mobile, row on larger screens
+        justifyContent="space-between"
       >
         {/* Left Side - Text Content */}
-        <Box flex="1" pr={{ md: 8 }} mb={{ base: 8, md: 0 }}>
-          <Heading as="h2" size="xl" mb={4}>
-            About Me
-          </Heading>
-          <Badge
-            variant="subtle"
-            colorScheme="yellow"
-            mb={4}
-            p={2}
-            rounded="md"
-            fontSize="md"
-            display="inline-flex"
-            alignItems="center"
-          >
-            ✉️ nestorcdev@gmail.com
-          </Badge>
+        <Box flexBasis="45%" flex="1" pr={{ md: 8 }} mb={{ base: 8, md: 0 }}>
           <Text fontSize="lg" lineHeight="tall">
-            I&apos;ve always had a{" "}
+            I&apos;ve always been driven by a{" "}
             <Text as="span" color="teal.400" fontWeight="bold">
-              love for technology
+              deep curiosity for technology
             </Text>
-            . Ever since I had my first computer, I was always curious to find
-            out how it works under the hood. It amazed me that people can create
-            something from nothing, and I’ve always had an appreciation for it.
-            Being able to be a part of that is what fulfills me. I am a{" "}
+            . From the moment I encountered my first computer, I was captivated
+            by the intricate mechanics working under the hood. It inspires me to
+            know that{" "}
+            <Text as="span" color="teal.400" fontWeight="bold">
+              we can create meaningful solutions from scratch
+            </Text>
+            , and being part of that creative process is what drives me. As a{" "}
             <Text as="span" color="teal.400" fontWeight="bold">
               full-stack web developer
             </Text>
-            . I have a passion for creating useful and user-friendly
-            applications. Other interests of mine include
+            , I’m passionate about crafting applications that are not only
+            functional but also{" "}
             <Text as="span" color="teal.400" fontWeight="bold">
-              {" "}
-              camping, traveling, and sightseeing
+              user-friendly and impactful
             </Text>
-            .
+            . When I’m not coding, I find joy in{" "}
+            <Text as="span" color="teal.400" fontWeight="bold">
+              camping, traveling, and discovering new sights
+            </Text>
+            , bringing the same curiosity and creativity to every aspect of my
+            life.
           </Text>
         </Box>
 
         {/* Right Side - Illustration */}
-        <Box flex="1" display="flex" justifyContent="center">
-          <Image
-            src={campground}
-            alt="About Me Illustration"
-            maxW="100%"
-            borderRadius="md"
-            objectFit="cover"
-          />
-        </Box>
+        <Box
+          flexBasis="45%"
+          maxHeight="45vh"
+          height="45vh"
+          bgImage={`url(${campground})`}
+          bgPosition="center"
+          bgRepeat="no-repeat"
+          bgSize="contain"
+          display={{ base: "none", md: "block" }} // Hide on mobile, show on larger screens
+        />
       </Flex>
     </Box>
   );

@@ -18,7 +18,7 @@ const theme = extendTheme({
         },
         Button: {
             baseStyle: {
-                bg: "red",
+                bg: "green",
                 _hover: {
                     bg: 'red',
                 },

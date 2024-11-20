@@ -24,8 +24,8 @@ export const Experience = () => {
   );
 
   return (
-    <Box py="70px" bg="black" color="white">
-      <Heading as="h2" size="xl" textAlign="center" mb={8}>
+    <Box py="70px" pb="120px" bg="black" color="white">
+      <Heading as="h2" size="xl" textAlign="center" mb={20}>
         Experience
       </Heading>
       <TwoColumnLayout leftContent={leftContent} rightContent={rightContent} />

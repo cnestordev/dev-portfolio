@@ -12,7 +12,7 @@ export const SkillSection = ({ title, skills }) => (
       flexDirection="column"
       zIndex={1}
     >
-      <CardHeader>
+      <CardHeader pb={0}>
         <Heading textAlign="left" size="md">{title}</Heading>
       </CardHeader>
       <CardBody flex="1">
