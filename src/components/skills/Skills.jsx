@@ -18,7 +18,6 @@ export const Skills = () => {
           textAlign="center"
           mr={4}
           p={4}
-          border="1px"
           borderRadius="md"
         >
           <SkillSection title="Frontend" skills={frontendSkills} />
@@ -28,20 +27,19 @@ export const Skills = () => {
           textAlign="center"
           ml={4}
           p={4}
-          border="1px"
           borderRadius="md"
         >
           <SkillSection title="Backend" skills={backendSkills} />
         </Box>
       </Flex>
-      <Box mt={6} p={4} border="1px">
+      <Box mt={6} p={4} >
         <SkillSection title="Other" skills={otherSkills} />
       </Box>
     </Box>
   );
 
   return (
-    <Box p={6}>
+    <Box bg='#f5f5f5' p={6}>
       <Heading as="h2" size="xl" textAlign="center" mb={8}>
         Tech Skills
       </Heading>

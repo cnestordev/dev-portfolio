@@ -1,15 +1,52 @@
 import { extendTheme } from '@chakra-ui/react';
 
-// Customize your theme here
 const theme = extendTheme({
     config: {
-        initialColorMode: 'light', // Default is light mode
-        useSystemColorMode: false,  // Enables system preference for light/dark
+        initialColorMode: 'light',
+        useSystemColorMode: false,
     },
     colors: {
-        brand: {
-            100: "#ff0000",
-            900: "#1a2fff",
+        navbarBg: '#000000',
+    },
+    components: {
+        Navbar: {
+            baseStyle: {
+                bg: 'navbarBg',
+                color: 'white',
+                px: 4,
+            },
+        },
+        Button: {
+            baseStyle: {
+                bg: "red",
+                _hover: {
+                    bg: 'red',
+                },
+            },
+            variants: {
+                navbarButton: {
+                    bg: 'transparent',
+                    border: '1px solid transparent',
+                    borderRadius: '50px',
+                    padding: '23px',
+                    color: 'white',
+                    _hover: {
+                        bg: '#001433',
+                        color: '#64afff'
+                    },
+                },
+                actionButton: {
+                    border: '1px solid transparent',
+                    borderRadius: '50px',
+                    padding: '23px',
+                    bg: '#001433',
+                    color: '#64afff',
+                    _hover: {
+                        bg: "#01255d",
+                        color: "#ffffff"
+                    },
+                },
+            },
         },
     },
 });

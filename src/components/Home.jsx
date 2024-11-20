@@ -23,7 +23,7 @@ export const Home = () => {
         >
           Full-Stack Web Developer
         </Text>
-        <Button mt={7} colorScheme="teal">
+        <Button variant="actionButton" mt={7} >
           Learn More
         </Button>
       </Box>

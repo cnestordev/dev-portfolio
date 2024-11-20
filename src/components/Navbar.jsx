@@ -8,16 +8,17 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import "../App.css"
 
 const Links = ["Home", "Skills", "Projects", "About", "Resume"];
 
-const NavLink = ({ children }) => <Button variant="ghost">{children}</Button>;
+const NavLink = ({ children }) => <Button variant="navbarButton">{children}</Button>;
 
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box px="4">
+    <Box bg="navbarBg" px="4" variant="navbar">
       <Flex h="16" align="center" justify="space-between">
         {/* Brand/Logo */}
         <Box fontSize="lg" fontWeight="bold">

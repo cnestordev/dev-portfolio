@@ -1,6 +1,6 @@
-import { Box, Heading, Flex } from "@chakra-ui/react";
-import { TwoColumnLayout } from "../TwoColumnLayout";
+import { Box, Heading } from "@chakra-ui/react";
 import { ExperienceCard, experienceList } from ".";
+import { TwoColumnLayout } from "../TwoColumnLayout";
 
 export const Experience = () => {
   const leftContent = (
