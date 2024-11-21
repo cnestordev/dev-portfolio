@@ -1,5 +1,17 @@
 svg.svg-image {
   position: absolute;
-  bottom: -5px;
+  bottom: -95px;
   left: 0;
+}
+
+@media (max-width: 1550px) {
+  svg.svg-image {
+    bottom: -35px;
+  }
+}
+
+@media (max-width: 1000px) {
+  svg.svg-image {
+    bottom: -5px;
+  }
 }

@@ -21,7 +21,7 @@ export const Home = () => {
 
       {/* Main Content */}
       <Box textAlign="center" zIndex={1}>
-        <Text fontSize="4xl" color="white">
+        <Text fontSize={{ base: "2xl", sm: "3xl" }} color="white">
           Nestor Cervantes
         </Text>
         <Text

@@ -23,9 +23,9 @@
 }
 
 .animated-gradient-text {
-  background: linear-gradient(135deg, #00c6ff, #0072ff, #00ff85);
+  background: linear-gradient(135deg, #00ff85, #28e08d, #0ce3ff, #28e08d, #00ff85);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 5s ease infinite;
+  animation: gradientAnimation 3s ease infinite;
 }

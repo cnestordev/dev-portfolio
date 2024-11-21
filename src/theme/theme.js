@@ -25,18 +25,18 @@ const theme = extendTheme({
                     padding: '23px',
                     color: 'white',
                     _hover: {
-                        bg: '#001433',
-                        color: '#64afff'
+                        bg: '#072714',
+                        color: '#d7ffe7'
                     },
                 },
                 actionButton: {
                     border: '1px solid transparent',
                     borderRadius: '50px',
                     padding: '23px',
-                    bg: '#001433',
-                    color: '#64afff',
+                    bg: '#072714',
+                    color: '#d7ffe7',
                     _hover: {
-                        bg: "#01255d",
+                        bg: "#01230f",
                         color: "#ffffff"
                     },
                 },

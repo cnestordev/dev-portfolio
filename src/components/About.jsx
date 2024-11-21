@@ -9,13 +9,14 @@ import {
 import { MdOutlineEmail } from "react-icons/md";
 import campground from "../assets/camp5.svg";
 import { PAGE_PADDING_X, PAGE_PADDING_Y } from "../utils/constants";
+import "./About.css";
 
 export const About = () => {
   const showImage = useBreakpointValue({ base: false, lg: true });
 
   return (
     <Box
-      bg="#FFF8E1"
+      className="about-section"
       px={PAGE_PADDING_X}
       py={PAGE_PADDING_Y}
       display="flex"
@@ -29,7 +30,7 @@ export const About = () => {
         About Me
       </Heading>
       <Box
-        bg="#f1e1ad"
+        bg="#e9ded5"
         borderRadius="10px"
         mb={4}
         p={4}
@@ -52,29 +53,29 @@ export const About = () => {
         <Box flex="1" pr={{ md: 8 }} mb={{ base: 8, md: 0 }}>
           <Text fontSize="lg" lineHeight="tall">
             I&apos;ve always been driven by a{" "}
-            <Text as="span" color="teal.400" fontWeight="bold">
+            <Text as="span" className="highlight-text">
               deep curiosity for technology
             </Text>
             . From the moment I encountered my first computer, I was captivated
             by the intricate mechanics working under the hood. It inspires me to
             know that{" "}
-            <Text as="span" color="teal.400" fontWeight="bold">
+            <Text as="span" className="highlight-text">
               we can create meaningful solutions from scratch
             </Text>
             , and being part of that creative process is what drives me.
           </Text>
           <Text fontSize="lg" lineHeight="tall" mt={4}>
             As a{" "}
-            <Text as="span" color="teal.400" fontWeight="bold">
+            <Text as="span" className="highlight-text">
               full-stack web developer
             </Text>
             , I’m passionate about crafting applications that are not only
             functional but also{" "}
-            <Text as="span" color="teal.400" fontWeight="bold">
+            <Text as="span" className="highlight-text">
               user-friendly and impactful
             </Text>
             . When I’m not coding, I find joy in{" "}
-            <Text as="span" color="teal.400" fontWeight="bold">
+            <Text as="span" className="highlight-text">
               camping, traveling, and discovering new sights
             </Text>
             , bringing the same curiosity and creativity to every aspect of my

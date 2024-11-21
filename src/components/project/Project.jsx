@@ -11,7 +11,7 @@ import { FaGithub } from "react-icons/fa";
 import taskboard from "../../assets/task-taskboard.png";
 import { PAGE_PADDING_X, PAGE_PADDING_Y } from "../../utils/constants";
 import { techIcons } from "../../utils/techIcons";
-import { SvgImgage } from "../SvgImage";
+import { SvgImage } from "../SvgImage";
 import { TwoColumnLayout } from "../TwoColumnLayout";
 import { ProjectDescription } from "./ProjectDescription";
 
@@ -74,9 +74,9 @@ export const Project = () => {
       <Flex gap={4}>
         <Button
           variant="actionButton"
-          bg="lightgray"
-          _hover={{ background: "#9caab9", color: "black" }}
-          color="black"
+          bg="#b8c9dd"
+          _hover={{ background: "#a1b4cb", color: "#001433" }}
+          color="#363e47"
           as={Link}
           href="https://task-mgr.tech"
           target="_blank"
@@ -86,9 +86,9 @@ export const Project = () => {
         </Button>
         <Button
           variant="actionButton"
-          bg="lightgray"
-          _hover={{ background: "#9caab9", color: "black" }}
-          color="black"
+          bg="#b8c9dd"
+          _hover={{ background: "#a1b4cb", color: "#001433" }}
+          color="#363e47"
           as={Link}
           href="https://github.com/cnestordev/task-manager"
           target="_blank"
@@ -132,7 +132,7 @@ export const Project = () => {
           rightContent={rightContent}
         />
       </Flex>
-      <SvgImgage />
+      <SvgImage />
     </Box>
   );
 };
