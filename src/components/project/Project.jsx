@@ -116,7 +116,7 @@ export const Project = () => {
         as="h2"
         size="xl"
         textAlign="center"
-        mb={8}
+        mb={{ base: 10, md: 10 }}
       >
         Projects
       </Heading>

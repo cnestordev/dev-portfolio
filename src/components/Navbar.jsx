@@ -76,7 +76,7 @@ export const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen ? (
         <Box pb="4" display={{ md: "none" }}>
-          <Stack as="nav" spacing="4">
+          <Stack color="#fff" textAlign="center" my={5} as="nav" spacing="4">
             {Links.map((link) =>
               link.id === "resume" ? (
                 <NavLink

@@ -47,7 +47,7 @@ export const Skills = () => {
 
   return (
     <Box id="skills" py={PAGE_PADDING_Y} px={PAGE_PADDING_X} bg="#f5f5f5">
-      <Heading as="h2" size="xl" textAlign="center" mb={{ base: 1, md: 8 }}>
+      <Heading as="h2" size="xl" textAlign="center" mb={{ base: 0, md: 10 }}>
         Tech Skills
       </Heading>
       <TwoColumnLayout leftContent={leftContent} rightContent={rightContent} />
