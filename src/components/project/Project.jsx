@@ -90,7 +90,7 @@ export const Project = () => {
           _hover={{ background: "#9caab9", color: "black" }}
           color="black"
           as={Link}
-          href="https://github.com/example"
+          href="https://github.com/cnestordev/task-manager"
           target="_blank"
         >
           <Flex gap={2} alignItems="center">

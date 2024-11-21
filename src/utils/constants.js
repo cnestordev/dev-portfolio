@@ -1,5 +1,5 @@
 export const PAGE_PADDING_X = { base: "15px", md: "20px", lg: "50px" };
-export const PAGE_PADDING_Y = "60px";
+export const PAGE_PADDING_Y = { base: "40px", md: "50px", lg: "60px" };
 export const Links = [
     { id: "home", label: "Home" },
     { id: "skills", label: "Skills" },

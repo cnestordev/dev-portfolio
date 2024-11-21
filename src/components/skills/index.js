@@ -12,6 +12,7 @@ export const frontendSkills = [
     "React Hook Form",
     "Redux",
     "Cypress",
+    "WordPress"
 ];
 
 export const backendSkills = [

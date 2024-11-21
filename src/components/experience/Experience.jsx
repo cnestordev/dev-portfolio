@@ -26,7 +26,7 @@ export const Experience = () => {
 
   return (
     <Box id="experience" py={PAGE_PADDING_Y} px={PAGE_PADDING_X} bg="black" color="white">
-      <Heading as="h2" size="xl" textAlign="center" mb={20}>
+      <Heading as="h2" size="xl" textAlign="center" mb={{ base: 10, md: 20 }}>
         Experience
       </Heading>
       <TwoColumnLayout leftContent={leftContent} rightContent={rightContent} />

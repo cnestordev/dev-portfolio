@@ -10,21 +10,25 @@ export const experienceList = [
         location: "Remote",
         date: "August 2021 - August 2022",
         details: [
-            "Led the front-end development of a property management platform using Angular, enhancing the efficiency of land listing management and improving user engagement.",
-            "Customized software applications to align with client branding, employing PrimeNG for UI components to ensure brand consistency and a seamless user experience.",
-            "Developed an innovative map versioning feature for a community map app using Mapbox, significantly enhancing functionality and interactive capabilities for users.",
+            "Collaborated daily with senior developers and product managers in an Agile environment, participating in standups and sprints to ensure alignment on project goals and deliverables.",
+            "Led the front-end development of a property management platform using Angular, streamlining the land listing process and enhancing user engagement for stakeholders like builders and developers.",
+            "Customized the UI using PrimeNG, aligning with client branding to deliver a seamless and consistent user experience.",
+            "Developed an innovative map versioning feature for a community mapping application using Mapbox, adding functionality that improved user interactivity and usability."
         ]
     },
     {
         logo: vbglogo,
         title: "Veteran Benefits Guide",
-        location: "Las Vegas, NV - Full-Stack Developer",
-        date: "AAugust 2021 - August 2022",
+        location: "Las Vegas, NV",
+        date: "August 2021 - August 2022",
         details: [
-            "Led the end-to-end development and implementation of an automated invoicing system using Node.js, fully integrated with SugarCRM, to optimize the invoice creation process for the company and its clients.",
-            "Achieved a dramatic reduction in manual invoice review time, from 50 hours to just 2 hours per invoice cycle, significantly enhancing operational efficiency and reducing overhead.",
-            "Implemented advanced features including error handling, batch operations, retry, and rollback mechanisms to ensure system resilience and maintain impeccable data integrity. Deployed the system using a dedicated PM2 process for optimal performance and minimal downtime.",
-            "Implemented real-time UI updates via web sockets, improving user experience and data accuracy. Streamlined data synchronization between company applications and SugarCRM, effectively resolving inter-departmental data discrepancies and boosting system reliability.",
+            "Inherited and stabilized a previously unreliable app by addressing critical bugs, reducing escalations from one per week to one per month, significantly improving system reliability.",
+            "Designed and built an automated invoicing system from scratch using Node.js and SugarCRM, replacing manual processes with a cron job that analyzed appointment data, calculated billing logic, and generated invoices accurately and efficiently.",
+            "Achieved a dramatic reduction in manual invoice processing overhead, cutting review time from 50 hours to just 2 hours per cycle, while minimizing errors and improving data integrity.",
+            "Maintained weekly contact with stakeholders, including medical networks, providers, and clinics, to review the user experience, gather feedback on improvements, provide progress updates, and obtain the necessary information to deliver tasks effectively.",
+            "Worked in an Agile team with daily standups and code reviews to maintain high-quality standards, utilizing PM2 to deploy a robust and reliable system with minimal downtime.",
+            "Implemented real-time updates using WebSockets, enhancing data synchronization and user experience for key stakeholders."
         ]
     },
 ];
+

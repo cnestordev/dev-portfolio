@@ -1,11 +1,10 @@
 import {
-  Badge,
   Box,
   Flex,
   Heading,
   Image,
   Text,
-  useBreakpointValue,
+  useBreakpointValue
 } from "@chakra-ui/react";
 import { MdOutlineEmail } from "react-icons/md";
 import campground from "../assets/camp5.svg";
@@ -29,8 +28,7 @@ export const About = () => {
       <Heading as="h2" size="xl" textAlign="center" mb={4}>
         About Me
       </Heading>
-      <Badge
-        variant="subtle"
+      <Box
         bg="#f1e1ad"
         borderRadius="10px"
         mb={4}
@@ -42,7 +40,7 @@ export const About = () => {
       >
         <MdOutlineEmail />
         <Text>nestorcdev@gmail.com</Text>
-      </Badge>
+      </Box>
 
       <Flex
         direction={{ base: "column", md: "row" }}
@@ -63,7 +61,10 @@ export const About = () => {
             <Text as="span" color="teal.400" fontWeight="bold">
               we can create meaningful solutions from scratch
             </Text>
-            , and being part of that creative process is what drives me. As a{" "}
+            , and being part of that creative process is what drives me.
+          </Text>
+          <Text fontSize="lg" lineHeight="tall" mt={4}>
+            As a{" "}
             <Text as="span" color="teal.400" fontWeight="bold">
               full-stack web developer
             </Text>
@@ -86,7 +87,8 @@ export const About = () => {
           flex="1"
           position="relative"
           zIndex="1"
-          display={showImage ? "block" : "none"}
+          display={showImage ? "flex" : "none"}
+          justifyContent="center"
         >
           <Image
             src={campground}
