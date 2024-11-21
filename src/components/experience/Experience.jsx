@@ -1,6 +1,7 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { ExperienceCard, experienceList } from ".";
 import { TwoColumnLayout } from "../TwoColumnLayout";
+import { PAGE_PADDING_X, PAGE_PADDING_Y } from "../../utils/constants";
 
 export const Experience = () => {
   const leftContent = (
@@ -24,7 +25,7 @@ export const Experience = () => {
   );
 
   return (
-    <Box py="70px" pb="120px" bg="black" color="white">
+    <Box id="experience" py={PAGE_PADDING_Y} px={PAGE_PADDING_X} bg="black" color="white">
       <Heading as="h2" size="xl" textAlign="center" mb={20}>
         Experience
       </Heading>

@@ -1,46 +1,57 @@
-import { Badge, Box, Flex, Heading, Text } from "@chakra-ui/react";
-import campground from "../assets/camp2.png";
+import {
+  Badge,
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { MdOutlineEmail } from "react-icons/md";
+import campground from "../assets/camp5.svg";
+import { PAGE_PADDING_X, PAGE_PADDING_Y } from "../utils/constants";
 
 export const About = () => {
+  const showImage = useBreakpointValue({ base: false, lg: true });
+
   return (
     <Box
-      position="relative"
       bg="#FFF8E1"
-      py={{ base: 10, md: 20 }}
-      px={{ base: 5, md: 20 }}
-      overflow="hidden"
+      px={PAGE_PADDING_X}
+      py={PAGE_PADDING_Y}
       display="flex"
       flexDirection="column"
       alignItems="center"
+      position="relative"
+      overflow="hidden"
+      id="about"
     >
-      <Box>
-        <Heading textAlign="center" as="h2" size="xl" mb={4}>
-          About Me
-        </Heading>
-        <Badge
-          variant="subtle"
-          backgroundColor="#f1e1ad"
-          mb={4}
-          p={2}
-          rounded="md"
-          fontSize="md"
-          display="inline-flex"
-          alignItems="center"
-          gap={1}
-        >
-          <MdOutlineEmail />
-          <Text>nestorcdev@gmail.com</Text>
-        </Badge>
-      </Box>
-      <Flex
-        align="center"
-        mx="auto"
-        direction={{ base: "column", md: "row" }} // Stack on mobile, row on larger screens
-        justifyContent="space-between"
+      <Heading as="h2" size="xl" textAlign="center" mb={4}>
+        About Me
+      </Heading>
+      <Badge
+        variant="subtle"
+        bg="#f1e1ad"
+        borderRadius="10px"
+        mb={4}
+        p={4}
+        fontSize="md"
+        display="flex"
+        alignItems="center"
+        gap={1}
       >
-        {/* Left Side - Text Content */}
-        <Box flexBasis="45%" flex="1" pr={{ md: 8 }} mb={{ base: 8, md: 0 }}>
+        <MdOutlineEmail />
+        <Text>nestorcdev@gmail.com</Text>
+      </Badge>
+
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        justify="space-between"
+        align="center"
+        w="100%"
+      >
+        {/* Left Content */}
+        <Box flex="1" pr={{ md: 8 }} mb={{ base: 8, md: 0 }}>
           <Text fontSize="lg" lineHeight="tall">
             I&apos;ve always been driven by a{" "}
             <Text as="span" color="teal.400" fontWeight="bold">
@@ -70,17 +81,21 @@ export const About = () => {
           </Text>
         </Box>
 
-        {/* Right Side - Illustration */}
+        {/* Right Content */}
         <Box
-          flexBasis="45%"
-          maxHeight="45vh"
-          height="45vh"
-          bgImage={`url(${campground})`}
-          bgPosition="center"
-          bgRepeat="no-repeat"
-          bgSize="contain"
-          display={{ base: "none", md: "block" }} // Hide on mobile, show on larger screens
-        />
+          flex="1"
+          position="relative"
+          zIndex="1"
+          display={showImage ? "block" : "none"}
+        >
+          <Image
+            src={campground}
+            alt="Campground"
+            w="100%"
+            maxW="800px"
+            objectFit="cover"
+          />
+        </Box>
       </Flex>
     </Box>
   );

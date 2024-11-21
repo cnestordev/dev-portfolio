@@ -9,10 +9,11 @@ import {
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import taskboard from "../../assets/task-taskboard.png";
+import { PAGE_PADDING_X, PAGE_PADDING_Y } from "../../utils/constants";
 import { techIcons } from "../../utils/techIcons";
 import { SvgImgage } from "../SvgImage";
-import { ProjectDescription } from "./ProjectDescription";
 import { TwoColumnLayout } from "../TwoColumnLayout";
+import { ProjectDescription } from "./ProjectDescription";
 
 export const Project = () => {
   const leftContent = (
@@ -102,7 +103,13 @@ export const Project = () => {
   );
 
   return (
-    <Box position="relative" py="70px" bg="#f5f5f5">
+    <Box
+      py={PAGE_PADDING_Y}
+      px={PAGE_PADDING_X}
+      position="relative"
+      bg="#f5f5f5"
+      id="projects"
+    >
       <Heading
         position="relative"
         zIndex={3}
@@ -120,7 +127,10 @@ export const Project = () => {
         gap={8}
         pb={55}
       >
-        <TwoColumnLayout leftContent={leftContent} rightContent={rightContent} />
+        <TwoColumnLayout
+          leftContent={leftContent}
+          rightContent={rightContent}
+        />
       </Flex>
       <SvgImgage />
     </Box>

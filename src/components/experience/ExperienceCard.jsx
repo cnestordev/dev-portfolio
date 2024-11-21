@@ -11,7 +11,7 @@ import {
 
 export const ExperienceCard = ({bgColor, logo, title, location, date, details }) => {
   return (
-    <Box m={2} height="100%">
+    <Box height="100%">
       <Card bg={bgColor} p={4} borderRadius="md" color="white" height="100%">
         <CardHeader>
           <Flex align="center" mb={2}>

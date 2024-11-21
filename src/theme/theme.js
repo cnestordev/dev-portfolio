@@ -17,12 +17,6 @@ const theme = extendTheme({
             },
         },
         Button: {
-            baseStyle: {
-                bg: "green",
-                _hover: {
-                    bg: 'red',
-                },
-            },
             variants: {
                 navbarButton: {
                     bg: 'transparent',

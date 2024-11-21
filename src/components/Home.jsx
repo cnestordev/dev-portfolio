@@ -2,10 +2,18 @@ import { Center, Box, Text, Button } from "@chakra-ui/react";
 import { GeometricShape } from "./GeometricShape";
 import { shapes } from "../utils/geoShapes";
 import "./Home.css";
+import { PAGE_PADDING_X } from "../utils/constants";
 
 export const Home = () => {
   return (
-    <Center bg="black" height="85vh" position="relative" overflow="hidden">
+    <Center
+      px={PAGE_PADDING_X}
+      bg="black"
+      height="85vh"
+      position="relative"
+      overflow="hidden"
+      id="home"
+    >
       {/* Render each shape from the array */}
       {shapes.map((shape, index) => (
         <GeometricShape key={index} {...shape} />
@@ -23,7 +31,13 @@ export const Home = () => {
         >
           Full-Stack Web Developer
         </Text>
-        <Button variant="actionButton" mt={7} >
+        <Button
+          as="a"
+          href="#skills"
+          target="_self"
+          variant="actionButton"
+          mt={7}
+        >
           Learn More
         </Button>
       </Box>
