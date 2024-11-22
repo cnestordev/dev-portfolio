@@ -2,7 +2,7 @@ import { Box, Flex } from "@chakra-ui/react";
 
 export const TwoColumnLayout = ({ leftContent, rightContent, ...props }) => {
   return (
-    <Box position="relative" zIndex={1} {...props}>
+    <Box position="relative" zIndex={1} {...props} mb={4}>
       <Flex
         direction={{ base: "column", md: "row" }} // Stack on mobile, row on larger screens
         alignItems="center"
@@ -12,7 +12,7 @@ export const TwoColumnLayout = ({ leftContent, rightContent, ...props }) => {
         {/* Left Column */}
         <Box
           display="flex"
-          alignItems="center"
+          alignItems="flex-start"
           alignSelf="stretch"
           flex="1"
           pr={{ base: 0, md: 4 }}
@@ -24,7 +24,7 @@ export const TwoColumnLayout = ({ leftContent, rightContent, ...props }) => {
         {/* Right Column */}
         <Box
           display="flex"
-          alignItems="center"
+          alignItems="flex-start"
           alignSelf="stretch"
           flex="1"
           pl={{ base: 0, md: 4 }}

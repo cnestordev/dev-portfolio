@@ -1,39 +1,73 @@
+import { useState } from "react";
 import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
   Box,
-  Card,
-  CardBody,
-  CardHeader,
   Flex,
   Heading,
   Image,
   Text,
 } from "@chakra-ui/react";
 
-export const ExperienceCard = ({bgColor, logo, title, location, date, details }) => {
+export const ExperienceCard = ({
+  logo,
+  company,
+  title,
+  location,
+  date,
+  details,
+  toggle
+}) => {
+  const [isExpanded, setIsExpanded] = useState(toggle);
+
+  // Function to toggle the expanded state
+  const toggleAccordion = () => {
+    setIsExpanded((prevState) => !prevState);
+  };
+
   return (
-    <Box height="100%">
-      <Card bg={bgColor} p={4} borderRadius="md" color="white" height="100%">
-        <CardHeader>
-          <Flex align="center" mb={2}>
-            <Image src={logo} width="10%" mr={3} alt={`${title} Logo`} />
-            <Box>
-              <Heading size="md" fontWeight="bold">
-                {title}
-              </Heading>
-              <Text fontSize="sm" color="gray.400">
-                {location} - {date}
-              </Text>
-            </Box>
-          </Flex>
-        </CardHeader>
-        <CardBody>
+    <Accordion allowToggle index={isExpanded ? [0] : []} width="100%">
+      <AccordionItem
+        padding="10px"
+        border="none"
+        backgroundColor="#1e1e1e"
+        borderRadius="10px"
+        width="100%"
+      >
+        <h2>
+          <AccordionButton
+            _expanded={{ color: "white" }}
+            width="100%"
+            onClick={toggleAccordion}
+          >
+            <Flex align="center" flex="1" textAlign="left">
+              <Image src={logo} width="3.5rem" mr={3} alt={`${title} Logo`} />
+              <Box>
+                <Heading size="sm" fontWeight="normal">
+                  {company}
+                </Heading>
+                <Heading size="md" fontWeight="500">
+                  {title}
+                </Heading>
+                <Text fontSize="sm">
+                  {location} - {date}
+                </Text>
+              </Box>
+            </Flex>
+            <AccordionIcon />
+          </AccordionButton>
+        </h2>
+        <AccordionPanel pb={4}>
           {details.map((detail, index) => (
             <Text fontSize="md" mb={2} key={index}>
               {detail}
             </Text>
           ))}
-        </CardBody>
-      </Card>
-    </Box>
+        </AccordionPanel>
+      </AccordionItem>
+    </Accordion>
   );
 };
