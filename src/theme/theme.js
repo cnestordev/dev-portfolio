@@ -38,15 +38,15 @@ const theme = extendTheme({
                     color: 'white',
                     _hover: {
                         bg: '#072714',
-                        color: '#d7ffe7'
+                        color: '#42c376'
                     },
                 },
                 actionButton: {
                     border: '1px solid transparent',
                     borderRadius: '50px',
                     padding: '23px',
-                    bg: '#165137',
-                    color: '#d7ffe7',
+                    bg: '#13ef89',
+                    color: '#02160a',
                     _hover: {
                         bg: "#01230f",
                         color: "#ffffff"

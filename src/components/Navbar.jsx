@@ -23,7 +23,6 @@ export const Navbar = () => {
 
   return (
     <Box
-      position="fixed"
       top="0"
       left="0"
       right="0"
