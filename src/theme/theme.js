@@ -38,7 +38,7 @@ const theme = extendTheme({
                     border: '1px solid transparent',
                     borderRadius: '50px',
                     padding: '23px',
-                    bg: '#072714',
+                    bg: '#165137',
                     color: '#d7ffe7',
                     _hover: {
                         bg: "#01230f",

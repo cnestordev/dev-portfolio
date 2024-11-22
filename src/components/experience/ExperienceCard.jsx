@@ -57,7 +57,7 @@ export const ExperienceCard = ({
         >
           <Flex align="center" flex="1" textAlign="left">
             <Image src={logo} width="3.5rem" mr={3} alt={`${title} Logo`} />
-            <Box>
+            <Box display="flex" flexDirection="column" gap={0.5}>
               <Heading size="sm" fontWeight="normal">
                 {company}
               </Heading>
@@ -77,7 +77,7 @@ export const ExperienceCard = ({
         </AccordionButton>
         <AccordionPanel pb={4}>
           {details.map((detail, index) => (
-            <Text fontSize="md" mb={2} key={index}>
+            <Text color="#d1d1d1" fontSize="md" mb={2} key={index}>
               {detail}
             </Text>
           ))}
