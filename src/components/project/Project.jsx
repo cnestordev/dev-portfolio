@@ -25,7 +25,7 @@ export const Project = () => {
       <Box mb={8}>
         <Heading as="h3" fontSize="34px" mb={3}>
           <Flex gap={1} direction={{ base: "column", "1064px": "row" }}>
-            <>Task Manager/</>
+            <>Task Manager: </>
             {<RotatingWords />}
           </Flex>
         </Heading>
