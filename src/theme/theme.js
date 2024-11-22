@@ -1,4 +1,4 @@
-import { extendTheme } from '@chakra-ui/react';
+import { chakra, extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
     config: {
@@ -7,14 +7,26 @@ const theme = extendTheme({
     },
     colors: {
         navbarBg: '#000000',
+        chakra: {
+            bodyText: {
+                color: 'green'
+            }
+        }
     },
     fonts: {
         body: '"Lexend", sans-serif',
         heading: '"Lexend", sans-serif',
         mono: 'Menlo, monospace',
     },
+    styles: {
+        global: {
+            body: {
+                color: "#313235"
+            }
+        }
+    },
     breakpoints: {
-        sm: "30em",  
+        sm: "30em",
         md: "48em",
         lg: "62em",
         xl: "80em",

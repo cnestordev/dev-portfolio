@@ -15,6 +15,7 @@ import { RotatingWords, useRotatingWords } from "../rotatingWords";
 import { SvgImage } from "../SvgImage";
 import { TwoColumnLayout } from "../TwoColumnLayout";
 import { ProjectDescription } from "./ProjectDescription";
+import "./Project.css"
 
 export const Project = () => {
   useRotatingWords();
@@ -56,7 +57,7 @@ export const Project = () => {
         boxShadow="lg"
         width="100%"
         maxW="850px"
-        border="4px solid gray"
+        className="project-presentation"
         mb={10}
       >
         <Flex bg="gray.100" py={2} px={4} align="center">

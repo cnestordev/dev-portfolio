@@ -11,6 +11,7 @@ export const SkillSection = ({ title, skills }) => (
       display="flex"
       flexDirection="column"
       zIndex={1}
+      color="inherit"
     >
       <CardHeader pb={0}>
         <Heading textAlign="left" size="md">{title}</Heading>
