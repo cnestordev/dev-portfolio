@@ -1,0 +1,6 @@
+.role-title-gradient {
+  font-weight: 700;
+  background: linear-gradient(to right, #2cceff, #04ff3ccf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -11,6 +11,7 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
+import "./Experience.css";
 
 export const ExperienceCard = ({
   logo,
@@ -19,7 +20,7 @@ export const ExperienceCard = ({
   location,
   date,
   details,
-  toggle
+  toggle,
 }) => {
   const [isExpanded, setIsExpanded] = useState(toggle);
 
@@ -37,29 +38,31 @@ export const ExperienceCard = ({
         borderRadius="10px"
         width="100%"
       >
-        <h2>
-          <AccordionButton
-            _expanded={{ color: "white" }}
-            width="100%"
-            onClick={toggleAccordion}
-          >
-            <Flex align="center" flex="1" textAlign="left">
-              <Image src={logo} width="3.5rem" mr={3} alt={`${title} Logo`} />
-              <Box>
-                <Heading size="sm" fontWeight="normal">
-                  {company}
-                </Heading>
-                <Heading size="md" fontWeight="500">
-                  {title}
-                </Heading>
-                <Text fontSize="sm">
-                  {location} - {date}
-                </Text>
-              </Box>
-            </Flex>
-            <AccordionIcon />
-          </AccordionButton>
-        </h2>
+        <AccordionButton
+          _expanded={{ color: "white" }}
+          width="100%"
+          onClick={toggleAccordion}
+        >
+          <Flex align="center" flex="1" textAlign="left">
+            <Image src={logo} width="3.5rem" mr={3} alt={`${title} Logo`} />
+            <Box>
+              <Heading size="sm" fontWeight="normal">
+                {company}
+              </Heading>
+              <Heading
+                className="role-title-gradient"
+                size="md"
+                fontWeight="500"
+              >
+                {title}
+              </Heading>
+              <Text fontSize="sm">
+                {location} - {date}
+              </Text>
+            </Box>
+          </Flex>
+          <AccordionIcon />
+        </AccordionButton>
         <AccordionPanel pb={4}>
           {details.map((detail, index) => (
             <Text fontSize="md" mb={2} key={index}>
