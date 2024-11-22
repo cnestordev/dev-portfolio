@@ -8,7 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
-import taskboard from "../../assets/task-taskboard.png";
+import taskboard from "../../assets/task-taskboard.gif";
 import { PAGE_PADDING_X, PAGE_PADDING_Y } from "../../utils/constants";
 import { techIcons } from "../../utils/techIcons";
 import { RotatingWords, useRotatingWords } from "../rotatingWords";
@@ -23,8 +23,9 @@ export const Project = () => {
     <Box>
       <Box mb={8}>
         <Heading as="h3" fontSize="34px" mb={3}>
-          <Flex gap={1}>
-            <>Task Manager</>/{<RotatingWords />}
+          <Flex gap={1} direction={{ base: "column", "1064px": "row" }}>
+            <>Task Manager/</>
+            {<RotatingWords />}
           </Flex>
         </Heading>
         <Text fontSize="md" mb={6}>
@@ -47,6 +48,7 @@ export const Project = () => {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
+      position="relative"
     >
       <Box
         borderRadius="md"
@@ -75,6 +77,7 @@ export const Project = () => {
           </Flex>
         ))}
       </Flex>
+
       {/* Action Buttons */}
       <Flex gap={4}>
         <Button

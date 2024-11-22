@@ -23,6 +23,7 @@ export const TwoColumnLayout = ({ leftContent, rightContent, ...props }) => {
 
         {/* Right Column */}
         <Box
+          justifyContent="center"
           display="flex"
           alignItems="flex-start"
           alignSelf="stretch"

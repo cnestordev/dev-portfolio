@@ -63,7 +63,7 @@ export const ExperienceCard = ({
               </Heading>
               <Heading
                 className="role-title-gradient"
-                size="md"
+                size={{ base: "sm", lg: "md" }}
                 fontWeight="500"
               >
                 {title}
