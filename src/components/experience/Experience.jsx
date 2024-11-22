@@ -3,7 +3,7 @@ import { ExperienceCard, experienceList } from ".";
 import { PAGE_PADDING_X, PAGE_PADDING_Y } from "../../utils/constants";
 
 export const Experience = () => {
-  const [isMobile] = useMediaQuery("(max-width: 48em)"); // Mobile detection
+  const [isMobile] = useMediaQuery("(max-width: 48em)");
   const reorderedList = isMobile
     ? [...experienceList].sort((a, b) => a.positionOnMobile - b.positionOnMobile)
     : experienceList;

@@ -8,6 +8,11 @@ const theme = extendTheme({
     colors: {
         navbarBg: '#000000',
     },
+    fonts: {
+        body: '"Lexend", sans-serif',
+        heading: '"Lexend", sans-serif',
+        mono: 'Menlo, monospace',
+    },
     components: {
         Navbar: {
             baseStyle: {

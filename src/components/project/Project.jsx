@@ -11,16 +11,21 @@ import { FaGithub } from "react-icons/fa";
 import taskboard from "../../assets/task-taskboard.png";
 import { PAGE_PADDING_X, PAGE_PADDING_Y } from "../../utils/constants";
 import { techIcons } from "../../utils/techIcons";
+import { RotatingWords, useRotatingWords } from "../rotatingWords";
 import { SvgImage } from "../SvgImage";
 import { TwoColumnLayout } from "../TwoColumnLayout";
 import { ProjectDescription } from "./ProjectDescription";
 
 export const Project = () => {
+  useRotatingWords();
+
   const leftContent = (
     <Box>
       <Box mb={8}>
-        <Heading as="h3" size="lg" mb={3}>
-          Task Manager
+        <Heading as="h3" fontSize="34px" mb={3}>
+          <Flex gap={1}>
+            <>Task Manager</>/{<RotatingWords />}
+          </Flex>
         </Heading>
         <Text fontSize="md" mb={6}>
           Task Manager is a collaborative web application designed for managing
