@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -10,6 +10,7 @@ import {
   Heading,
   Image,
   Text,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import "./Experience.css";
 
@@ -22,7 +23,18 @@ export const ExperienceCard = ({
   details,
   toggle,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(toggle);
+  const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    // On mobile (below "md"), always collapse
+    if (!isLargerThanMd) {
+      setIsExpanded(false);
+    } else {
+      // On larger screens, respect the "toggle" prop
+      setIsExpanded(toggle);
+    }
+  }, [isLargerThanMd, toggle]);
 
   // Function to toggle the expanded state
   const toggleAccordion = () => {

@@ -17,7 +17,8 @@ export const experienceList = [
             "Customized the UI using PrimeNG, aligning with client branding to deliver a seamless and consistent user experience.",
             "Developed an innovative map versioning feature for a community mapping application using Mapbox, adding functionality that improved user interactivity and usability."
         ],
-        toggle: true
+        toggle: true,
+        positionOnMobile: 1,
     },
     {
         logo: idm,
@@ -43,7 +44,8 @@ export const experienceList = [
             "Assisted clients with hosting and domain-related concerns to facilitate seamless project progression.",
             "Attended team meetings to discuss ongoing projects, blockers, or upcoming tasks."
         ],
-        toggle: false
+        toggle: false,
+        positionOnMobile: 2,
     },
     {
         logo: vbglogo,
@@ -59,7 +61,8 @@ export const experienceList = [
             "Worked in an Agile team with daily standups and code reviews to maintain high-quality standards, utilizing PM2 to deploy a robust and reliable system with minimal downtime.",
             "Implemented real-time updates using WebSockets, enhancing data synchronization and user experience for key stakeholders."
         ],
-        toggle: true
+        toggle: true,
+        positionOnMobile: 0,
     },
 ];
 
