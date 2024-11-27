@@ -1,10 +1,22 @@
-import { Center, Box, Text, Button } from "@chakra-ui/react";
-import { GeometricShape } from "./GeometricShape";
+import {
+  Box,
+  Button,
+  Center,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import { PAGE_PADDING_X, RESUME_URL } from "../utils/constants";
 import { shapes } from "../utils/geoShapes";
+import { GeometricShape } from "./GeometricShape";
 import "./Home.css";
-import { PAGE_PADDING_X } from "../utils/constants";
 
 export const Home = () => {
+  const isDesktop = useBreakpointValue({ base: false, md: true });
+
+  const handleClick = (site) => {
+    window.open(site, "_blank");
+  };
+
   return (
     <Center
       px={PAGE_PADDING_X}
@@ -31,15 +43,27 @@ export const Home = () => {
         >
           Full-Stack Web Developer
         </Text>
-        <Button
-          as="a"
-          href="#skills"
-          target="_self"
-          variant="actionButton"
-          mt={7}
-        >
-          Learn More
-        </Button>
+        <Box>
+          {isDesktop ? (
+            <Button
+              as="a"
+              href="#skills"
+              target="_self"
+              variant="actionButton"
+              mt={7}
+            >
+              Learn More
+            </Button>
+          ) : (
+            <Button
+              onClick={() => handleClick(RESUME_URL)}
+              variant="actionButton"
+              mt={7}
+            >
+              View Resume
+            </Button>
+          )}
+        </Box>
       </Box>
     </Center>
   );
