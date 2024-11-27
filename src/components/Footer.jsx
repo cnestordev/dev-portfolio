@@ -1,7 +1,7 @@
 import { Box, Flex, Icon, Text, useBreakpointValue } from "@chakra-ui/react";
 import { BiFile } from "react-icons/bi";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
-import { PAGE_PADDING_X } from "../utils/constants";
+import { PAGE_PADDING_X, RESUME_URL } from "../utils/constants";
 
 export const Footer = () => {
   const handleClick = (site) => {
@@ -25,11 +25,7 @@ export const Footer = () => {
           mx="4"
           my={isMobile ? "2" : "0"}
           cursor="pointer"
-          onClick={() =>
-            handleClick(
-              "https://drive.google.com/file/d/xxxxxxxxxxxxxxxxxx/view?usp=sharing"
-            )
-          }
+          onClick={() => handleClick(RESUME_URL)}
         >
           <Icon as={BiFile} fontSize="1.2rem" mr="2" />
           <Text>

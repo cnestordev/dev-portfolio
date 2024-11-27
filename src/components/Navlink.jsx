@@ -14,6 +14,8 @@ export const NavLink = ({ id, label, isExternal, href, onClick }) => {
       rel={isExternal ? "noopener noreferrer" : undefined}
       variant={buttonVariant}
       onClick={onClick}
+      background={isExternal ? "#13ef89" : ""}
+      color={isExternal ? "#000" : "#fff"}
     >
       {label}
     </Button>

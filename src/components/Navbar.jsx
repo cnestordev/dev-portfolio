@@ -5,11 +5,11 @@ import {
   HStack,
   IconButton,
   Stack,
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react";
 import "../App.css";
 import mainlogo from "../assets/mainlogo.svg";
-import { Links, PAGE_PADDING_X } from "../utils/constants";
+import { Links, PAGE_PADDING_X, RESUME_URL } from "../utils/constants";
 import { NavLink } from "./Navlink";
 
 export const Navbar = () => {
@@ -49,10 +49,11 @@ export const Navbar = () => {
           {Links.map((link) =>
             link.id === "resume" ? (
               <NavLink
+                id={link.id}
                 key={link.id}
                 label={link.label}
-                isExternal
-                href="https://example.com/resume.pdf"
+                isExternal={true}
+                href={RESUME_URL}
               />
             ) : (
               <NavLink key={link.id} id={link.id} label={link.label} />
@@ -82,7 +83,7 @@ export const Navbar = () => {
                   key={link.id}
                   label={link.label}
                   isExternal
-                  href="https://example.com/resume.pdf"
+                  href={RESUME_URL}
                   onClick={handleNavClick}
                 />
               ) : (

@@ -5,5 +5,6 @@ export const Links = [
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "about", label: "About" },
-    { id: null, label: "Resume" },
+    { id: "resume", label: "Resume" },
 ];
+export const RESUME_URL = "https://drive.google.com/file/d/1Icp4n1lXCy4Uz9Wdd8rQAdQrooNkIrpN/view?usp=sharing";

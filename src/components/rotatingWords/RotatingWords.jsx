@@ -5,7 +5,7 @@ import { h3 } from "framer-motion/client";
 const RotatingWords = () => {
   return (
     <Box className="rotating-text">
-      <p>
+      <span>
         <Text as={h3} className="word w-1">
           collaborate
         </Text>
@@ -21,7 +21,7 @@ const RotatingWords = () => {
         <Text as={h3} className="word w-5">
           simplify
         </Text>
-      </p>
+      </span>
     </Box>
   );
 };
