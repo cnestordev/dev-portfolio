@@ -32,7 +32,7 @@ export const Home = () => {
       ))}
 
       {/* Main Content */}
-      <Box textAlign="center" zIndex={1}>
+      <Box className="home-container" textAlign="center" zIndex={1}>
         <Text fontSize={{ base: "2xl", sm: "3xl" }} color="white">
           Nestor Cervantes
         </Text>
@@ -42,6 +42,14 @@ export const Home = () => {
           className="animated-gradient-text"
         >
           Full-Stack Web Developer
+        </Text>
+        <Text mt="2" lineHeight="1.6" px={{ base: "0%", sm: "20%" }} color="white">
+          Dedicated developer with extensive experience in React and Node.js.
+          Passionate about leveraging and expanding my skills to solve
+          real-world problems and bring innovative solutions to life. With a
+          strong focus on user experience, I specialize in designing and
+          developing efficient, user-friendly web applications that are tailored
+          to client needs and built for long-term scalability.
         </Text>
         <Box>
           {isDesktop ? (
