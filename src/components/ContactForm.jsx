@@ -163,7 +163,7 @@ export const ContactForm = () => {
               {/* reCAPTCHA Component */}
               <Flex justifyContent="center" mb={4}>
                 <ReCAPTCHA
-                  sitekey="6LdXvpMqAAAAAP0K9yBZkUizcotOTisQajE2_S4m"
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                   onChange={handleCaptchaChange}
                 />
               </Flex>
