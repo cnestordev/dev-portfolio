@@ -15,11 +15,22 @@ import { useState } from "react";
 import * as Yup from "yup";
 import ReCAPTCHA from "react-google-recaptcha";
 import { NotificationModal } from "./NotificationModal";
+import { CheckIcon, CloseIcon } from "@chakra-ui/icons";
 
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [captchaToken, setCaptchaToken] = useState(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const defaultModalContent = {
+    title: "",
+    body: "",
+    icon: null,
+    info: "",
+    link: "",
+    emailSubject: "",
+    emailBody: "",
+  };
+  const [modalContent, setModalContent] = useState(defaultModalContent);
 
   // Validation schema
   const validationSchema = Yup.object({
@@ -40,37 +51,49 @@ export const ContactForm = () => {
   };
 
   // Handle form submission
-  const sendEmail = (values, actions) => {
-    if (!captchaToken) {
-      alert("Please complete the reCAPTCHA verification.");
-      return;
-    }
-
+  const sendEmail = async (values, actions) => {
     setIsLoading(true);
-    emailjs
-      .send(
-        "service_ewbjijk",
-        "template_qyavj39",
+
+    try {
+      // Send email using emailjs
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: values.from_name,
           email: values.email,
           message: values.message,
           "g-recaptcha-response": captchaToken,
         },
-        "ezjcmvcyfzWReaJZO"
-      )
-      .then(
-        () => {
-          onOpen(); // Open the confirmation modal
-          setIsLoading(false);
-          setCaptchaToken(null); // Reset reCAPTCHA token
-          actions.resetForm();
-        },
-        () => {
-          alert("An error occurred. Please try again.");
-          setIsLoading(false);
-        }
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
+
+      // Success: Update modal content and reset form
+      setModalContent({
+        title: "Message Sent",
+        body: "Thank you for your message! I’ll get back to you soon.",
+        icon: <CheckIcon color="#2bd167" />,
+      });
+      onOpen();
+      setCaptchaToken(null); // Reset reCAPTCHA token
+      actions.resetForm();
+    } catch (error) {
+      // Error: Update modal content and log error
+      setModalContent({
+        title: "Error",
+        body: "An error occurred while sending your message.",
+        info: "Please email me directly at",
+        link: "nestorcdev@gmail.com",
+        emailSubject: "Inquiry from Portfolio Contact Form",
+        emailBody: `${values.message}\n\n${values.from_name}`,
+        icon: <CloseIcon color="#d12b2b" />,
+      });
+      console.error("EmailJS Error:", error);
+      setCaptchaToken(null); // Reset reCAPTCHA token after failure
+      onOpen();
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -204,7 +227,18 @@ export const ContactForm = () => {
           )}
         </Formik>
       </Box>
-      <NotificationModal isOpen={isOpen} onClose={onClose} />
+      <NotificationModal
+        isOpen={isOpen}
+        onClose={onClose}
+        title={modalContent.title}
+        body={modalContent.body}
+        icon={modalContent.icon}
+        info={modalContent.info}
+        link={modalContent.link}
+        emailSubject={modalContent.emailSubject}
+        emailBody={modalContent.emailBody}
+        footerButtonLabel="Got it"
+      />
     </>
   );
 };
