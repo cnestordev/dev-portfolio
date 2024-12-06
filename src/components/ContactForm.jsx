@@ -96,10 +96,13 @@ export const ContactForm = () => {
                 isInvalid={errors.from_name && touched.from_name}
               >
                 <FormLabel
-                  visibility="hidden"
-                  fontSize="sm"
-                  fontWeight="medium"
-                  color="#6b6b6b"
+                  position="absolute"
+                  width="1px"
+                  height="1px"
+                  overflow="hidden"
+                  clip="rect(0, 0, 0, 0)"
+                  whiteSpace="nowrap"
+                  border="0"
                 >
                   Name
                 </FormLabel>
@@ -117,10 +120,13 @@ export const ContactForm = () => {
               </FormControl>
               <FormControl mb={4} isInvalid={errors.email && touched.email}>
                 <FormLabel
-                  visibility="hidden"
-                  fontSize="sm"
-                  fontWeight="medium"
-                  color="#6b6b6b"
+                  position="absolute"
+                  width="1px"
+                  height="1px"
+                  overflow="hidden"
+                  clip="rect(0, 0, 0, 0)"
+                  whiteSpace="nowrap"
+                  border="0"
                 >
                   Email
                 </FormLabel>
@@ -139,10 +145,13 @@ export const ContactForm = () => {
               </FormControl>
               <FormControl mb={4} isInvalid={errors.message && touched.message}>
                 <FormLabel
-                  visibility="hidden"
-                  fontSize="sm"
-                  fontWeight="medium"
-                  color="#6b6b6b"
+                  position="absolute"
+                  width="1px"
+                  height="1px"
+                  overflow="hidden"
+                  clip="rect(0, 0, 0, 0)"
+                  whiteSpace="nowrap"
+                  border="0"
                 >
                   Message
                 </FormLabel>

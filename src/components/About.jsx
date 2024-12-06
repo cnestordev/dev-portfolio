@@ -41,8 +41,6 @@ export const About = () => {
           width="100%"
           position="relative"
           flex="1"
-          pr={{ md: 8 }}
-          mb={{ base: 8, md: 0 }}
         >
           <ContactForm />
         </Box>
