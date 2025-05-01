@@ -7,4 +7,4 @@ export const Links = [
     { id: "about", label: "About" },
     { id: "resume", label: "Resume" },
 ];
-export const RESUME_URL = "https://drive.google.com/file/d/1Icp4n1lXCy4Uz9Wdd8rQAdQrooNkIrpN/view?usp=sharing";
+export const RESUME_URL = "https://docs.google.com/document/d/10-79odgiXiF_MaILGz8D4eEYxNhGW4hVIafajIDuDU4/edit?usp=sharing";
