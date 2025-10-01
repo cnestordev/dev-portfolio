@@ -4,7 +4,7 @@ export const Links = [
     { id: "home", label: "Home" },
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
-    { id: "about", label: "About" },
+    { id: "contact", label: "Contact" },
     { id: "resume", label: "Resume" },
 ];
 export const RESUME_URL = "https://docs.google.com/document/d/10-79odgiXiF_MaILGz8D4eEYxNhGW4hVIafajIDuDU4/edit?usp=sharing";

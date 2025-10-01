@@ -75,8 +75,8 @@ export const Footer = () => {
         >
           <Icon as={FaEnvelope} fontSize="1.2rem" mr="2" />
           <Text>
-            nestorcdev
-            <GradientText weight="normal">@gmail.com</GradientText>
+            <GradientText weight="normal">nestorcdev</GradientText>
+            @gmail.com
           </Text>
         </Flex>
       </Flex>

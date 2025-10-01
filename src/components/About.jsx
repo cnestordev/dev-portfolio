@@ -1,6 +1,4 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
-import campground from "../assets/backdrop.svg";
-import campgroundMobileAlt from "../assets/backdrop_mobile.svg";
 import { PAGE_PADDING_X } from "../utils/constants";
 import "./About.css";
 import { ContactForm } from "./ContactForm";
@@ -15,14 +13,7 @@ export const About = () => {
       alignItems="center"
       position="relative"
       overflow="hidden"
-      id="about"
-      backgroundImage={{
-        base: `url(${campgroundMobileAlt})`,
-        lg: `url(${campground})`,
-      }}
-      backgroundSize={{ base: "cover", lg: "contain" }}
-      backgroundPosition="center"
-      backgroundRepeat="no-repeat"
+      id="contact"
       minH="600px"
     >
       <Heading as="h2" size="xl" textAlign="center" mb={{base: -5, lg: 2}}>
