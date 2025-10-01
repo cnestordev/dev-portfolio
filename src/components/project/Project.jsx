@@ -13,9 +13,9 @@ import { PAGE_PADDING_X, PAGE_PADDING_Y } from "../../utils/constants";
 import { techIcons } from "../../utils/techIcons";
 import { RotatingWords, useRotatingWords } from "../rotatingWords";
 import { SvgImage } from "../SvgImage";
-import { TwoColumnLayout } from "../TwoColumnLayout";
+import "./Project.css";
 import { ProjectDescription } from "./ProjectDescription";
-import "./Project.css"
+import { ColumnLayout } from "../ColumnLayout";
 
 export const Project = () => {
   useRotatingWords();
@@ -136,10 +136,7 @@ export const Project = () => {
         gap={8}
         pb={55}
       >
-        <TwoColumnLayout
-          leftContent={leftContent}
-          rightContent={rightContent}
-        />
+        <ColumnLayout leftContent={leftContent} rightContent={rightContent} />
       </Flex>
       <SvgImage />
     </Box>

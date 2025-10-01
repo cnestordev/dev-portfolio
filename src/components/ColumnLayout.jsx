@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
 
-export const TwoColumnLayout = ({ leftContent, rightContent, ...props }) => {
+export const ColumnLayout = ({ leftContent, rightContent, ...props }) => {
   return (
     <Box position="relative" zIndex={1} {...props} mb={4}>
       <Flex
@@ -10,16 +10,18 @@ export const TwoColumnLayout = ({ leftContent, rightContent, ...props }) => {
         gap={{ base: 6, md: 5 }} // Add spacing between items when stacked
       >
         {/* Left Column */}
-        <Box
-          display="flex"
-          alignItems="flex-start"
-          alignSelf="stretch"
-          flex="1"
-          pr={{ base: 0, md: 4 }}
-          mb={{ base: 4, md: 0 }}
-        >
-          {leftContent}
-        </Box>
+        {leftContent && (
+          <Box
+            display="flex"
+            alignItems="flex-start"
+            alignSelf="stretch"
+            flex="1"
+            pr={{ base: 0, md: 4 }}
+            mb={{ base: 4, md: 0 }}
+          >
+            {leftContent}
+          </Box>
+        )}
 
         {/* Right Column */}
         <Box
