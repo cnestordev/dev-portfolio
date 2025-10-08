@@ -1,4 +1,4 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Heading } from "@chakra-ui/react";
 import { SkillSection, backendSkills, frontendSkills, otherSkills } from ".";
 import { PAGE_PADDING_X, PAGE_PADDING_Y } from "../../utils/constants";
 import { ColumnLayout } from "../ColumnLayout";
@@ -6,31 +6,31 @@ import { ColumnLayout } from "../ColumnLayout";
 export const Skills = () => {
   const rightContent = (
     <Box width="100%">
-      <Flex
-        justify="space-between"
-        direction={{ base: "column", md: "row" }} // Stack on mobile, row on larger screens
+      <Grid
         gap={5}
+        templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
       >
-        <Box
-          flex="1"
-          textAlign="center"
-          mb={{ base: 4, md: 0 }} // Add spacing on mobile
-          borderRadius="md"
-        >
-          <SkillSection title="Frontend" skills={frontendSkills} />
-        </Box>
-        <Box
-          flex="1"
-          textAlign="center"
-          mb={{ base: 4, md: 0 }} // Add spacing on mobile
-          borderRadius="md"
-        >
-          <SkillSection title="Backend" skills={backendSkills} />
-        </Box>
-        <Box flex="1" mb={{ base: 4, md: 0 }}>
-          <SkillSection title="Other" skills={otherSkills} />
-        </Box>
-      </Flex>
+        {/* Mobile: 50% | Desktop: 33% */}
+        <GridItem colSpan={{ base: 1, md: 1 }}>
+          <Box textAlign="center" borderRadius="md">
+            <SkillSection title="Frontend" skills={frontendSkills} />
+          </Box>
+        </GridItem>
+
+        {/* Mobile: 50% | Desktop: 33% */}
+        <GridItem colSpan={{ base: 1, md: 1 }}>
+          <Box textAlign="center" borderRadius="md">
+            <SkillSection title="Backend" skills={backendSkills} />
+          </Box>
+        </GridItem>
+
+        {/* Mobile: 100% (spans both cols) | Desktop: 33% */}
+        <GridItem colSpan={{ base: 2, md: 1 }}>
+          <Box textAlign="center" borderRadius="md">
+            <SkillSection title="Other" skills={otherSkills} />
+          </Box>
+        </GridItem>
+      </Grid>
     </Box>
   );
 

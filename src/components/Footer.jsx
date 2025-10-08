@@ -48,21 +48,6 @@ export const Footer = () => {
           </Text>
         </Flex>
 
-        {/* LinkedIn */}
-        <Flex
-          align="center"
-          color="white"
-          mx="4"
-          my={isMobile ? "2" : "0"}
-          cursor="pointer"
-          onClick={() => handleClick("https://www.linkedin.com/in/cnestordev/")}
-        >
-          <Icon as={FaLinkedin} fontSize="1.2rem" mr="2" />
-          <Text>
-            <GradientText>/</GradientText>in
-            <GradientText>/</GradientText>cnestordev
-          </Text>
-        </Flex>
 
         {/* Email */}
         <Flex
