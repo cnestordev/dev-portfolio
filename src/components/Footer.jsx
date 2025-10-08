@@ -1,6 +1,6 @@
 import { Box, Flex, Icon, Text, useBreakpointValue } from "@chakra-ui/react";
 import { BiFile } from "react-icons/bi";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub } from "react-icons/fa";
 import { PAGE_PADDING_X, RESUME_URL } from "../utils/constants";
 
 export const Footer = () => {
