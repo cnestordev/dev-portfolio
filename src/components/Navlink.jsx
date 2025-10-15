@@ -1,4 +1,5 @@
 import { Button, useBreakpointValue } from "@chakra-ui/react";
+import "./Navlink.css"
 
 export const NavLink = ({ id, label, isExternal, href, onClick }) => {
   // Determine button variant based on breakpoint
@@ -6,7 +7,6 @@ export const NavLink = ({ id, label, isExternal, href, onClick }) => {
     base: "unstyled",
     md: "navbarButton",
   });
-
 
   const background = useBreakpointValue({
     base: "transparent", // Default for smaller screens
@@ -19,17 +19,19 @@ export const NavLink = ({ id, label, isExternal, href, onClick }) => {
   });
 
   return (
-    <Button
-      as="a"
-      href={isExternal ? href : `#${id}`}
-      target={isExternal ? "_blank" : "_self"}
-      rel={isExternal ? "noopener noreferrer" : undefined}
-      variant={buttonVariant}
-      onClick={onClick}
-      background={background}
-      color={color}
-    >
-      {label}
-    </Button>
+    <a href={isExternal ? href : `#${id}`} className="nav-link-container">
+      <Button
+        as="a"
+        target={isExternal ? "_blank" : "_self"}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        variant={buttonVariant}
+        onClick={onClick}
+        background={background}
+        color={color}
+      >
+        {label}
+      </Button>
+      <div className="selected"></div>
+    </a>
   );
 };

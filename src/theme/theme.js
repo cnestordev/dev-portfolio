@@ -48,10 +48,6 @@ const theme = extendTheme({
                     borderRadius: '50px',
                     padding: '23px',
                     color: 'white',
-                    _hover: {
-                        bg: '#072714',
-                        color: '#42c376'
-                    },
                 },
                 actionButton: {
                     border: '1px solid transparent',
