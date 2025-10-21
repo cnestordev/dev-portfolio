@@ -10,7 +10,7 @@ export const NavLink = ({ id, label, isExternal, href, onClick }) => {
 
   const background = useBreakpointValue({
     base: "transparent", // Default for smaller screens
-    md: isExternal ? "#13ef89" : undefined, // Apply only on desktop
+    md: isExternal ? "#fff" : undefined, // Apply only on desktop
   });
 
   const color = useBreakpointValue({
@@ -19,10 +19,8 @@ export const NavLink = ({ id, label, isExternal, href, onClick }) => {
   });
 
   return (
-    <a href={isExternal ? href : `#${id}`} className="nav-link-container">
+    <a target={isExternal ? "_blank" : "_self"} href={isExternal ? href : `#${id}`} className={isExternal ? "nav-link-container-ext" : `${"nav-link-container"}`}>
       <Button
-        as="a"
-        target={isExternal ? "_blank" : "_self"}
         rel={isExternal ? "noopener noreferrer" : undefined}
         variant={buttonVariant}
         onClick={onClick}

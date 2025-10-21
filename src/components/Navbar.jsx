@@ -82,7 +82,7 @@ export const Navbar = () => {
                 <NavLink
                   key={link.id}
                   label={link.label}
-                  isExternal
+                  isExternal={true}
                   href={RESUME_URL}
                   onClick={handleNavClick}
                 />

@@ -1,9 +1,11 @@
-.nav-link-container {
+.nav-link-container,
+.nav-link-container-ext {
   position: relative;
   display: inline-block;
 }
 
-.nav-link-container .selected {
+.nav-link-container .selected,
+.nav-link-container-ext .selected {
   background-color: #9595955c;
   position: absolute;
   width: 0%;
@@ -18,9 +20,26 @@
   transition: opacity 0.2s ease;
 }
 
-.nav-link-container:hover .selected {
-  opacity: 1;
-  animation: expandWidth 250ms forwards;
+.nav-link-container-ext .chakra-button {
+  color: #000;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link-container-ext .selected {
+  background-color: #0ead624a;
+}
+
+@media (min-width: 768px) {
+  .nav-link-container:hover .selected,
+  .nav-link-container-ext:hover .selected {
+    opacity: 1;
+    animation: expandWidth 250ms forwards;
+  }
+
+  .nav-link-container-ext:hover .chakra-button {
+    background-color: transparent !important;
+    color: #99fbcc;
+  }
 }
 
 @keyframes expandWidth {
