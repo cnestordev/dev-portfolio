@@ -16,9 +16,19 @@ import { SvgImage } from "../SvgImage";
 import "./Project.css";
 import { ProjectDescription } from "./ProjectDescription";
 import { ColumnLayout } from "../ColumnLayout";
+import { useEffect } from "react";
 
 export const Project = () => {
+  const mainProjectUrl = "https://teamtasks.site";
+
   useRotatingWords();
+
+  useEffect(() => {
+    fetch(`${mainProjectUrl}/api/healthcheck`, {
+      method: "GET",
+      mode: "no-cors",
+    }).catch(() => {});
+  }, []);
 
   const leftContent = (
     <Box>
@@ -87,7 +97,7 @@ export const Project = () => {
           _hover={{ background: "#a1b4cb", color: "#001433" }}
           color="#363e47"
           as={Link}
-          href="https://task-mgr.tech"
+          href={mainProjectUrl}
           target="_blank"
           mr={2}
         >
